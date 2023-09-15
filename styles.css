@@ -1,0 +1,93 @@
+
+header{
+    background-color: red;
+    padding: 2vh;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    
+    animation: header 2s ease-in-out;
+    
+    }
+    @keyframes header{
+        0%{
+            transform: translateY(-100%); 
+        }
+    }
+    
+    
+    .required:after{
+        content: "*";
+        color: rgb(255, 0, 0);
+    }
+    h2{
+        margin-bottom: -10%;
+        padding-bottom: 2vh;
+    }
+    
+    .rate {
+        float: left;
+        height: 50px;
+        padding: 0 6px;
+        
+    }
+    .rate:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .rate:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
+    }
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+    .rate > input:checked ~ label {
+        color: #ea00ff;    
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #17d7de;  
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #ff0101;
+    }
+    .required1{
+     padding-top: 9vh;
+    
+    }
+    .required1::after{
+        content: "*";
+        color: #ff0101;
+    }
+    .radio1{
+     padding-left: 1vh;
+     color: rgb(4, 92, 255);
+     font-weight: 600;
+     
+    }
+    .nun{
+        /* padding:2vh; */
+        padding-left: 9vh;
+    
+    }
+    .non{
+        padding-left: 7vh;
+    }
+    
+    
+    button{
+    
+        border-radius: 10%;
+        box-shadow: 0 2px 12px rgb(252, 0, 0);
+    }
+    
