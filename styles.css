@@ -1,20 +1,12 @@
 
-header{
-    background-color: red;
-    padding: 2vh;
-    font-size: x-large;
-    font-weight: 600;
-    text-align: center;
-    
-    animation: header 2s ease-in-out;
-    
+   .container {
+    border: 1px solid black;
+    width: 890px;
+   }
+   .name {
+        padding: 10px;
+        margin: 10px;
     }
-    @keyframes header{
-        0%{
-            transform: translateY(-100%); 
-        }
-    }
-    
     
     .required:after{
         content: "*";
@@ -25,41 +17,31 @@ header{
         padding-bottom: 2vh;
     }
     
-    .rate {
-        float: left;
-        height: 50px;
-        padding: 0 6px;
-        
+    .rating {
+        width: 200px;
+        height: 40px;
     }
-    .rate:not(:checked) > input {
-        position:absolute;
-        top:-9999px;
+    .rating label {
+        float: right;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
     }
-    .rate:not(:checked) > label {
-        float:right;
-        width:1em;
-        overflow:hidden;
-        white-space:nowrap;
-        cursor:pointer;
-        font-size:30px;
-        color:#ccc;
+    .rating label:not(:first-of-type) {
+        padding-right: 2px;
     }
-    .rate:not(:checked) > label:before {
-        content: '★ ';
+    .rating label:before {
+        content: "\2605";
+        font-size: 25px;
+        color: #ccc;
+        line-height: 1;
     }
-    .rate > input:checked ~ label {
-        color: #ea00ff;    
+    .rating input {
+        display: none;
     }
-    .rate:not(:checked) > label:hover,
-    .rate:not(:checked) > label:hover ~ label {
-        color: #17d7de;  
-    }
-    .rate > input:checked + label:hover,
-    .rate > input:checked + label:hover ~ label,
-    .rate > input:checked ~ label:hover,
-    .rate > input:checked ~ label:hover ~ label,
-    .rate > label:hover ~ input:checked ~ label {
-        color: #ff0101;
+    .rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+        color: #f9df4a;
     }
     .required1{
      padding-top: 9vh;
@@ -69,12 +51,17 @@ header{
         content: "*";
         color: #ff0101;
     }
+
+    input:checked {
+        border:none
+      }
     .radio1{
      padding-left: 1vh;
-     color: rgb(4, 92, 255);
+     color: rgb(0, 0, 0);
      font-weight: 600;
      
     }
+   
     .nun{
         /* padding:2vh; */
         padding-left: 9vh;
@@ -84,7 +71,12 @@ header{
         padding-left: 7vh;
     }
     
-    
+    .row-1 {
+        background-color: #F1F1F1
+    }
+    .row-3 {
+        background-color: #F1F1F1
+    }
     button{
     
         border-radius: 10%;
